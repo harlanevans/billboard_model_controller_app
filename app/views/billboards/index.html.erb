@@ -1,0 +1,20 @@
+<h1>Click a Billboard Top Artists/Song to View!</h1>
+<%= link_to "Add a New Billboard", new_billboard_path %>
+<ul>
+<% @billboards.each do |billboard| %>
+  <li>
+    <%= link_to billboard.name, billboard %>
+  </li>
+</ul>
+  <br />
+  <br />
+  <br />
+  <%= link_to "Let Me See this Billboard!", billboard_path(billboard) %>
+  <br />
+  <br />
+  <br />
+  <%= link_to "Get Rid of this Billboard!", billboard_path(billboard), method: :destroy %>
+  <br />
+  <br />
+  <br />
+<% end %>

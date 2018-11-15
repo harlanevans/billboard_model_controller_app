@@ -1,0 +1,11 @@
+<h1>Create a New Billboard</h1>
+<%= form_for @billboard do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.submit %>
+  <% end %>
+  
